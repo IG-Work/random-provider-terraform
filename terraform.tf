@@ -19,6 +19,11 @@ resource "random_password" "password" {
   override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
+resource "random_pet" "example" {
+  length    = 2
+  separator = "-"
+}
+
 output "random_id_example" {
   value = random_id.example.hex
 }
@@ -26,6 +31,10 @@ output "random_id_example" {
 output "random_password" {
   value     = random_password.password.result
   sensitive = true
+}
+
+output "random_pet" {
+  value = random_pet.example.id
 }
 
 /*resource "aws_db_instance" "example" {
