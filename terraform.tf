@@ -24,7 +24,8 @@ output "random_id_example" {
 }
 
 output "random_password" {
-  value = random_password.password.result
+  value     = random_password.password.result
+  sensitive = true
 }
 
 /*resource "aws_db_instance" "example" {
