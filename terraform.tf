@@ -27,7 +27,7 @@ resource "random_pet" "example" {
   count = 10
 }
 
-output "random_id_example" {
+/*output "random_id_example" {
   value = random_id.example.hex
 }
 
@@ -38,7 +38,7 @@ output "random_password" {
 
 output "random_pet" {
   value = random_pet.example.id
-}
+}*/
 
 /*resource "aws_db_instance" "example" {
   instance_class    = "db.t3.micro"
