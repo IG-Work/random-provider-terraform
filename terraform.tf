@@ -11,20 +11,20 @@ provider "random" {}
 
 resource "random_id" "example" {
   byte_length = 8
-  count = 100
+  count = 150
 }
 
 resource "random_password" "password" {
   length           = 16
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
-  count = 100
+  count = 150
 }
 
 resource "random_pet" "example" {
   length    = 2
   separator = "-"
-  count = 100
+  count = 150
 }
 
 /*output "random_id_example" {
