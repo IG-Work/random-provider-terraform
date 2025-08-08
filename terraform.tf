@@ -27,6 +27,21 @@ resource "random_pet" "example" {
   count = 150
 }
 
+output "sample_random_ids" {
+  value = slice([for id in random_id.example : id.hex], 0, 5)
+}
+
+
+output "random_passwords" {
+  value     = [for p in random_password.password : p.result]
+  sensitive = true
+}
+
+output "random_pets" {
+  value = [for pet in random_pet.example : pet.id]
+}
+
+
 /*output "random_id_example" {
   value = random_id.example.hex
 }
