@@ -11,24 +11,24 @@ provider "random" {}
 
 resource "random_id" "example" {
   byte_length = 8
-  count = 150
+  count = 5
 }
 
 resource "random_password" "password" {
   length           = 16
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
-  count = 150
+  count = 5
 }
 
 resource "random_pet" "example" {
   length    = 2
   separator = "-"
-  count = 150
+  count = 5
 }
 
 output "sample_random_ids" {
-  value = slice([for id in random_id.example : id.hex], 0, 5)
+  value = slice([for id in random_id.example : id.hex], 0, 3)
 }
 
 
