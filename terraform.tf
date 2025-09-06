@@ -11,7 +11,7 @@ provider "random" {}
 
 resource "random_id" "example" {
   byte_length = 8
-  count = 5
+  count = 4
 }
 
 resource "random_password" "password" {
