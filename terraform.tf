@@ -22,7 +22,7 @@ resource "random_password" "password" {
 }
 
 resource "random_pet" "example" {
-  length    = 2
+  length    = 5
   separator = "-"
   count = 5
 }
