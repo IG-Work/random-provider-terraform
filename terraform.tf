@@ -10,7 +10,7 @@ terraform {
 provider "random" {}
 
 resource "random_id" "example" {
-  byte_length = 8
+  byte_length = 7
   count = 5
 }
 
